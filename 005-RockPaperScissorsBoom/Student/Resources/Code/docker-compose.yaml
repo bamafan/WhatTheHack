@@ -15,7 +15,7 @@ services:
       dockerfile: Dockerfile-Server
     container_name: rockpaperscissors-server
     environment:
-      "ConnectionStrings:DefaultConnection": "Server=rockpaperscissors-sql,1433;Database=RockPaperScissorsBoom;User Id=SA;Password=M1cr0s0ft2018;"
+      "ConnectionStrings:DefaultConnection": "Server=tcp:rpsserver.database.windows.net,1433;Initial Catalog=rpsdb;Persist Security Info=False;User ID=ncgadmin;Password=K3mch0K3mch0;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
     ports:
         - "80:80"
     depends_on:
